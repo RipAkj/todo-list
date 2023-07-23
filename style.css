@@ -1,0 +1,285 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+  }
+  [contenteditable] {
+    font-size: 16px;
+    padding: .25em 0em;
+    margin: 1em 0;
+    transition: padding .3s ease-in-out;
+  }
+  
+  [contenteditable]:hover,
+  [contenteditable]:focus {
+    padding: .25em;
+  }
+  
+  [contenteditable]:hover {
+    background: #fafafa;
+    outline: 2px solid #eee;
+  }
+  
+  [contenteditable]:focus {
+    background: #efefef;
+    outline: 2px solid rgb(167, 167, 167);
+  }
+
+  .whole{
+    width:99%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    background-color: #7bffc1
+  }
+  .one{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+  }
+  .two{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+  }
+  .three{
+    display: flex;
+    flex-direction: row;
+    width:70%;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+  .four{
+    display: flex;
+    flex-direction: row;
+    width:70%;
+    justify-content: flex-start;
+    padding-top: 15px;
+  }
+  .fourOne{
+    margin-right:10px;
+    background-color: #2046c5;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 100ms;
+    vertical-align: baseline;
+  }
+
+.fourOne:hover {
+  background-color: #7e314e;
+}
+.fourOne:active{
+  background-color: #ffffff;
+  transition: background-color 100ms;
+}
+.fourTwo{
+    margin-right:10px;
+    background-color: #c90f3d;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+}
+
+.fourTwo:hover {
+  background-color: #7e314e;
+}
+.fourTwo:active{
+  background-color: #ffffff;
+  transition: background-color 100ms;
+}
+  
+#tableBody{
+  width:70%;
+}
+h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.span{
+  width:12%;
+}
+label{
+  font-size: 20px;
+  padding-right: 10px;
+}
+input{
+  height:20px;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  border-style: none;
+}
+button{
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+select{
+  height:35px;
+  font-size: 20px;;
+  border-radius: 5px;
+  border-style: none;
+}
+textarea{
+  border-radius: 5px;
+  font-size: 20px;
+  border-style: none;
+}
+.filter{
+  width:70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.fu{
+  margin-right: 16px;
+}
+#startDate{
+  margin-right:45px;
+}
+#filterBtn,#filterprioBtn,#filtercatBtn{
+  margin-left: 10px;
+  height: 30px;
+    background-color: #947bda;
+    margin-right: 16px;
+    font-size: 16px;
+}
+#filterBtn:hover,#filterprioBtn:hover,#filtercatBtn:hover{
+  background-color: #45a049;
+}
+#filtercatBtn{
+  margin-right: 400px;
+}
+#categoryFilter{
+  width:100px !important;
+}
+.view{
+  line-height: 20px;
+    padding: 10px 16px;
+    margin-bottom: 5px;
+}
+.pending{
+  margin-left: 10px;
+  height: 30px;
+    background-color: #947bda;
+    margin-right: 16px;
+    font-size: 16px;
+}
+li {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3;
+}
+.activity{
+  justify-self: start;
+  width:70%;
+}
+.eachActivity{
+  width:100%;
+  background-color: white;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.individualItem {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 8px 0;
+  padding: 10px;
+  background-color: #f5f5f5;
+  width:100%;
+}
+.task-item1{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 8px 0 0 15px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  width:70%;
+  font-weight: bold;
+}
+.todoSno{
+  width:5%;
+}
+.todoTitle{
+  width:15%;
+}
+.todoDesc{
+  width:20%;
+}
+.todoDueDate{
+  width:10%;
+  padding-left: 25px;
+}
+.todoPriority{
+  width:5%;
+}
+.todoCategory{
+  width:14%;
+}
+.todoTags{
+  width:15% !important;
+  text-align: center;
+  display: flex;
+  height:auto;
+  flex-wrap: wrap;
+}
+.todoActions{
+  width:20%;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.done{
+  text-decoration: line-through;
+  color: #50535f;
+}
+.delete{
+  background-color: #c90f3d;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.edit{
+  background-color: #2046c5;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  
+}
+.mark{
+  background-color: #0fc9b6;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.it{
+  font-size: 15px;
+  width: min-content;
+  height:min-content;
+  background-color: #deccf5;
+  gap: 5px;
+  border-radius: 5px;
+  margin:3px;
+  padding: 3px;
+}

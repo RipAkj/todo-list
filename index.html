@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Todo's List</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+</head>
+
+<body>
+  
+  <div class="whole">
+    <h2 class="header">TODOs List</h2>
+    <div class="one">
+      <label for="title">Title</label>
+      <input type="text" id="title" row="10" col="40">
+      <p id="emailHelp">Add an item to the list</p>
+    </div>
+    <div class="two">
+      <label for="description">Description</label>
+      <textarea id="description" rows="3"></textarea>
+    </div>
+    <div class="three">
+    <div>
+      <label for="dueDate">Due Date: </label>
+      <input type="date" id="dueDate" name="dueDate">
+    </div>
+    <div>
+      <label for="category">Category: </label>
+      <input type="text" id="category" name="category">
+    </div>
+    <div>
+      <label for="priority">Priority: </label>
+      <select id="priority" name="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+    <div>
+      <label for="tags">Tags: </label>
+      <input type="text" id="tags" name="tags">
+    </div>
+  </div>
+  <div class="four">
+    <button id="add" class="fourOne"onclick="getAndUpdate()">Add to list</button>
+    <button id="clear" class="fourTwo" onclick="clearStorage()">Clear List</button>
+  </div>
+  <div class="filter">
+    <h2 class="fu">Filter Using</h2>
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate">
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate">
+    <button id="filterBtn" onclick="filterUsingDateRange()">Filter</button>
+  </div>
+  <div class="filter">
+    <h2 class="fu">Filter Using</h2>
+    <label class="left1" for="priorityFilter">Priority</label>
+    <select id="priorityFilter" name="priorityFilter" aria-placeholder="Priority">
+        <option value="none">Default</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+    </select>
+    <button id="filterprioBtn" onclick="filterUsingPriority()">Filter</button>
+    <label class="left" for="categoryFilter">Category: </label>
+    <input type="text" id="categoryFilter" placeholder="Category">
+    <button id="filtercatBtn" onclick="filterUsingCategory()">Filter</button>
+  </div>
+  <div class="filter">
+    <h2 class="fu">View Options</h2>
+    <button class="pending" onclick="viewMissing()">Missed Tasks</button>
+    <button class="pending" onclick="viewPending()">Pending Tasks</button>
+    <button class="pending" onclick="viewAllItems()">All Tasks</button>
+</div>
+<div class="filter">
+  <h2 class="fu">Sorting By</h2>
+  <button class="pending" onclick="sortUsingPriority()">Priority</button>
+  <button class="pending" onclick="sortUsingDueDate()">Due Date</button>
+</div>
+<div class="filter">
+  <h2 class="fu">Search</h2>
+    <input type="text" id="searchInput" placeholder="Search tasks...">
+    <button class="pending" onclick="searchTodo()">Search Task</button>
+</div>
+<li class="task-item1">
+  <span class="todoSno" id="sno">Sno</span>
+  <span class="todoTitle" id="Title">Title</span>
+  <span class="todoDesc" id="Description">Description</span>
+  <span class="todoCategory" id="Category">Category</span>
+  <span class="todoPriority" id="Priority">Priority</span>
+  <span class="todoDueDate" id="Due_Date">Due Date</span>
+  <span class="todoTags" id="tags">Tags</span>
+  <span class="todoActions" id="Acions">Actions</span>
+</li>
+<div id="tableBody">
+      
+</div>   
+<h2>Activity Log</h2>
+<div class="activity" id="activityLog">
+  <ul id="eachLog">
+
+  </ul>
+</div>
+</div>
+
+
+
+
+  <script src="script1.js"></script>
+</body>
+
+</html>
